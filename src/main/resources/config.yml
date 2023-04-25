@@ -1,0 +1,36 @@
+# スタート感圧板のブロック位置
+start-location:
+  ==: org.bukkit.Location
+  world: "world"
+  x: 0
+  y: 0
+  z: 0
+
+# チェックポイントはListとして保存してください、上から順に0, 1, 2...のチェックポイントとなります
+checkpoints:
+  - ==: org.bukkit.Location
+    world: "world"
+    x: 1
+    y: 0
+    z: 0
+  - ==: org.bukkit.Location
+    world: "world"
+    x: 2
+    y: 0
+    z: 0
+
+# ゴール感圧板のブロック位置
+goal-location:
+  ==: org.bukkit.Location
+  world: "world"
+  x: 3
+  y: 0
+  z: 0
+
+# ランキングホログラムの位置
+ranking-location:
+  ==: org.bukkit.Location
+  world: "world"
+  x: 0.0
+  y: 0.0
+  z: 0.0

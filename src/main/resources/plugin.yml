@@ -1,0 +1,4 @@
+name: HippogriffParkourPlugin
+version: '${project.version}'
+main: net.ramuremo.hippogriffparkour.HippogriffParkourPlugin
+api-version: 1.19
