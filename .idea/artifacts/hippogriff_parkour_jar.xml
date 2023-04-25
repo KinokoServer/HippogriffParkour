@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="hippogriff-parkour:jar">
-    <output-path>$PROJECT_DIR$/debug/plugins</output-path>
-    <root id="archive" name="hippogriff-parkour.jar">
-      <element id="module-output" name="hippogriff-parkour" />
-    </root>
-  </artifact>
-</component>
