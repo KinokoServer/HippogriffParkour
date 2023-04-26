@@ -30,14 +30,15 @@ public final class CallCheckpointEventListener implements Listener {
         final Block block = event.getClickedBlock();
         if (block == null) return;
 
-        final Player player = event.getPlayer();
-        if (!manager.isStarted(player)) return;
-        if (!rateLimiter.tryAcquire(player)) return;
 
         final int checkpoint = manager.config.getCheckpoints().indexOf(block.getLocation());
         if (checkpoint == -1) return;
 
         event.setCancelled(true);
+
+        final Player player = event.getPlayer();
+        if (!manager.isStarted(player)) return;
+        if (!rateLimiter.tryAcquire(player)) return;
 
         final int currentCheckpoint = manager.getCheckpoint(player);
         if (currentCheckpoint + 1 != checkpoint) return;

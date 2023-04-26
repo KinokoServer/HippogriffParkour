@@ -30,14 +30,13 @@ public final class CallParkourGoalEventListener implements Listener {
         final Block block = event.getClickedBlock();
         if (block == null) return;
 
+        if (!manager.config.getGoalPoint().equals(block.getLocation())) return;
+        event.setCancelled(true);
+
         final Player player = event.getPlayer();
         if (!rateLimiter.tryAcquire(player)) return;
-
-        if (!manager.isStarted(player)) return;
-        if (!manager.config.getGoalPoint().equals(block.getLocation())) return;
         if (manager.getCheckpoint(player) != manager.config.getCheckpoints().size() - 1) return;
-
-        event.setCancelled(true);
+        if (!manager.isStarted(player)) return;
 
         Util.callEvent(new ParkourGoalEvent(player, block));
     }

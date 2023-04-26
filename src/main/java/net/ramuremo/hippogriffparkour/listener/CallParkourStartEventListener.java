@@ -30,12 +30,12 @@ public final class CallParkourStartEventListener implements Listener {
 
         if (!action.equals(Action.PHYSICAL)) return;
         if (block == null) return;
+        if (!manager.config.getStarPoint().equals(block.getLocation())) return;
 
         event.setCancelled(true);
 
         if (!rateLimiter.tryAcquire(player)) return;
 
-        if (!manager.config.getStarPoint().equals(block.getLocation())) return;
 
         final ParkourStartEvent startEvent = new ParkourStartEvent(player, block);
 
