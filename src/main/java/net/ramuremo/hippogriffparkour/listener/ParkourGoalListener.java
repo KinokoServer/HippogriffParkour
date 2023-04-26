@@ -26,14 +26,14 @@ public final class ParkourGoalListener implements Listener {
     public void onParkourGoal(ParkourGoalEvent event) {
         final Player player = event.getPlayer();
         final double time = manager.getTime(player);
-
         final Map<OfflinePlayer, Double> times = manager.playerDataManager.getTimes();
+        final double ownRecord = times.getOrDefault(player, Double.NaN);
 
         final double maxTime = times.isEmpty() ? 0 : Collections.max(times.values());
-        final boolean ownRecord = times.get(player) > time;
+        final boolean isOwnRecord = Double.isNaN(ownRecord) || times.get(player) > time;
         final boolean record = maxTime > time;
 
-        if (ownRecord) {
+        if (isOwnRecord) {
             times.put(player, time);
             manager.playerDataManager.save(times);
         }
