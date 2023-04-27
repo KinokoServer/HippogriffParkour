@@ -10,7 +10,7 @@ This repo may occur bugs or something else, then notice me.
 
 ## How To Setup
 1. Clone this repository with `git clone https://github.com/KinokoServer/HippogriffParkour`
-2. Compile with maven mvn `package`
+2. Compile with maven `mvn package`
 3. Deploy compiled jar file from target directory.
 4. Restart the server.
 5. Place pressure plates as start-point, checkpoints, goal-point.
