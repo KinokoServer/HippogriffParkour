@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 import javax.annotation.Nonnull;
 
 public final class CheckpointCommand extends Command {
-    
+
     private final ParkourManager manager;
 
     public CheckpointCommand(ParkourManager manager) {

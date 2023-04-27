@@ -36,7 +36,6 @@ public final class CallParkourStartEventListener implements Listener {
 
         if (!rateLimiter.tryAcquire(player)) return;
 
-
         final ParkourStartEvent startEvent = new ParkourStartEvent(player, block);
 
         Util.callEvent(startEvent);

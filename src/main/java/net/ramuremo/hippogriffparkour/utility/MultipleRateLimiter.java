@@ -9,9 +9,8 @@ import java.util.Set;
 public class MultipleRateLimiter<T> {
 
     public final Plugin plugin;
-    private long rate;
-
     private final Set<T> limited = new HashSet<>();
+    private long rate;
 
     public MultipleRateLimiter(Plugin plugin, long rate) {
         this.plugin = plugin;

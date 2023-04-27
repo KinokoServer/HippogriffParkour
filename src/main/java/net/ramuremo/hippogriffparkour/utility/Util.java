@@ -22,7 +22,7 @@ public final class Util {
         final Location loc = location.clone();
         final Location block = loc.getBlock().getLocation();
 
-        loc.set(block.x() + 0.5 , block.y(), block.y() + 0.5);
+        loc.set(block.x() + 0.5, block.y(), block.y() + 0.5);
 
         return location;
     }

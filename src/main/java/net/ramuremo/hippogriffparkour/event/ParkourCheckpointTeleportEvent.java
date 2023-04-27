@@ -10,6 +10,13 @@ import javax.annotation.Nonnull;
 public final class ParkourCheckpointTeleportEvent extends Event implements Cancellable {
 
     private static final HandlerList HANDLERS = new HandlerList();
+    private final Player player;
+    private final int checkpoint;
+    private boolean cancelled = false;
+    public ParkourCheckpointTeleportEvent(Player player, int checkpoint) {
+        this.player = player;
+        this.checkpoint = checkpoint;
+    }
 
     public static HandlerList getHandlerList() {
         return HANDLERS;
@@ -18,15 +25,6 @@ public final class ParkourCheckpointTeleportEvent extends Event implements Cance
     @Override
     public @Nonnull HandlerList getHandlers() {
         return HANDLERS;
-    }
-
-    private final Player player;
-    private final int checkpoint;
-    private boolean cancelled = false;
-
-    public ParkourCheckpointTeleportEvent(Player player, int checkpoint) {
-        this.player = player;
-        this.checkpoint = checkpoint;
     }
 
     public Player getPlayer() {
