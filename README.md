@@ -19,4 +19,4 @@ This repo may occur bugs or something else, then notice me.
 
 ## Licence
 
-*HippogriffParkour*'s code is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
+*HippogriffParkour*'s code is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](LICENSE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
